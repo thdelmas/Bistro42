@@ -14,6 +14,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+  * [Usage](#usage)
 * [Contributing](#contributing)
 * [Contact Us](#contact-us)
 * [Authors](#authors)
@@ -51,6 +52,11 @@ See the [open issues](https://github.com/thdelmas/bistro42/issues) for a list of
 git clone https://github.com/thdelmas/bistro42 # Fetch source files
 
 ```
+
+### Usage
+
+> Warning: Power Off via VirtualBox GUI leads to dataloss (mainly shell history)
+
 
 ## Contributing
 
