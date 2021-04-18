@@ -57,6 +57,9 @@ git clone https://github.com/thdelmas/bistro42 # Fetch source files
 
 > Warning: Power Off via VirtualBox GUI leads to dataloss (mainly shell history)
 
+- Connect with login: `student` and password: `student`
+- Open a shell (`Ctrl` + `alt` + `t`)
+- Run `~/.configure`
 
 ## Contributing
 
