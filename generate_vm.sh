@@ -57,4 +57,6 @@ VBoxManage storageattach "$VM_NAME" --storagectl "IDE Controller" --port 1 --dev
 VBoxManage modifyvm "$VM_NAME" --boot1 dvd --boot2 disk --boot3 none --boot4 none 
 
 # Insert Face B or Disk 2 to finish the install (^_^?)
+# VboxManage startvm "$VM_NAME"
+# Je me demande vraiment à quoi sert cette commande
 fi
