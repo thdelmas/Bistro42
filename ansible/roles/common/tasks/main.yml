@@ -1,0 +1,7 @@
+---
+- name: Add the user '{{ student_login }}' with a primary group of 'student'
+  become: yes
+  ansible.builtin.user:
+    name: '{{ student_login }}'
+    password: toto
+    group: student
