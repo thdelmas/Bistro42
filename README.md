@@ -50,7 +50,17 @@ See the [open issues](https://github.com/thdelmas/bistro42/issues) for a list of
 
 ```sh
 git clone https://github.com/thdelmas/bistro42 # Fetch source files
+cd bistro42
 
+# Create the virtualbox vm
+./generate_vm.sh
+
+# Install linux with https://github.com/coreprocess/linux-unattended-installation
+
+# Run setup_42Home with the slug of the projects you want to setup
+# ex: ./setup_42Home.sh libft ; ./setup_42Home.sh libft get_next_line
+# Without arguments the script will setup an instance compatible with all projects
+./setup_42Home.sh
 ```
 
 ### Usage
@@ -97,3 +107,5 @@ Thanks to all people spending their time to make a better world
 - [Official VM documentation 🇬🇧 ](https://drive.google.com/open?id=1J-3LxhaMrX-EOBVNo0lJaensLJgmGM2O)
 - [Official VM 🇫🇷 ](https://cdn.42.fr/xubuntu-42.ova)
 - [Official VM documentation 🇫🇷 ](https://drive.google.com/open?id=1FldhyDrknoxWUG9g5KhrS1QeJ_twShjD)
+
+- [Unattended linux install](https://github.com/coreprocess/linux-unattended-installation)
