@@ -1,0 +1,27 @@
+--- isofiles/boot/grub/grub.cfg	2021-03-27 11:40:31.000000000 +0100
++++ grub2.cfg	2021-05-05 10:04:54.519902094 +0200
+@@ -24,6 +24,12 @@
+ insmod play
+ play 960 440 1 0 4 440 1
+ set theme=/boot/grub/theme/1
++set timeout=10
++menuentry --hotkey=a 'Automated install' {
++    set background_color=black
++    linux    /install.amd/vmlinuz auto=true priority=critical vga=788 --- quiet 
++    initrd   /install.amd/initrd.gz
++}
+ menuentry --hotkey=g 'Graphical install' {
+     set background_color=black
+     linux    /install.amd/vmlinuz vga=788 --- quiet 
+@@ -64,11 +70,6 @@
+         linux    /install.amd/vmlinuz vga=788 rescue/enable=true --- quiet 
+         initrd   /install.amd/initrd.gz
+     }
+-    menuentry --hotkey=a '... Automated install' {
+-        set background_color=black
+-        linux    /install.amd/vmlinuz auto=true priority=critical vga=788 --- quiet 
+-        initrd   /install.amd/initrd.gz
+-    }
+     submenu --hotkey=s '... Speech-enabled advanced options ...' {
+         set menu_color_normal=cyan/blue
+         set menu_color_highlight=white/blue
