@@ -134,6 +134,6 @@
 -menuentry --hotkey=s 'Install with speech synthesis' {
 -    set background_color=black
 -    linux    /install.amd/vmlinuz vga=788 speakup.synth=soft --- quiet 
-+    linux    /install.amd/vmlinuz auto=true noprompt file=/cdrom/preseed.cfg vga=788 --- quiet 
++    linux    /install.amd/vmlinuz auto=true noprompt file=/cdrom/preseed/preseed.cfg hostname=42Home vga=788 --- quiet 
      initrd   /install.amd/gtk/initrd.gz
  }

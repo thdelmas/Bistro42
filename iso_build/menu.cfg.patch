@@ -5,7 +5,7 @@
  menu width 70
  
 -menu title Debian GNU/Linux installer menu (BIOS mode)
-+menu title Debian42 GNU/Linux installer menu (BIOS mode)
++menu title Bistro42 GNU/Linux
  include stdmenu.cfg
  include gtk.cfg
  include txt.cfg

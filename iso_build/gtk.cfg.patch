@@ -5,4 +5,4 @@
  	menu default
  	kernel /install.amd/vmlinuz
 -	append vga=788 initrd=/install.amd/gtk/initrd.gz --- quiet 
-+	append auto=true noprompt vga=788 initrd=/install.amd/gtk/initrd.gz --- quiet 
++	append auto=true noprompt hostname=42Home domain=unnamed vga=788 preseed/file=/cdrom/preseed/preseed.cfg initrd=/install.amd/gtk/initrd.gz --- quiet 
