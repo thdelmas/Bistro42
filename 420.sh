@@ -30,10 +30,13 @@ VM_CPUS_COUNT='2'
 printf "${TC_BLUE}\t42OS\nWelcome ${USER}${TC_RESET}\n"
 printf "${TC_YELLOW}Please choose your base distribution${TC_RESET}\n"
 
+
 # Prevent unwanted space spliting
 OLD_IFS="$IFS"
 IFS='
 '
+
+# Fetch linuxvmimages.com
 CURL_RESULT="$(curl --progress-bar https://www.linuxvmimages.com/images/ 2>/dev/null | grep h4 | sed -E 's/<h4>|<\/h4>//g')"
 AVAILABLE_OS=''
 
@@ -47,13 +50,16 @@ $SHORTNAME"
 	fi
 done
 
+
+# Select Base OS
 select SELECTION in $(echo "$AVAILABLE_OS" | sort)
 do
 	printf "Your selection: ${TC_GREEN}$SELECTION${TC_RESET}\n"
 	break
 done
-IFS="$OLD_IFS"
+
 # Reset IFS
+IFS="$OLD_IFS"
 
 
 TARGET_OS_URL="$(echo "$CURL_RESULT" |
