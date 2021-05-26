@@ -16,3 +16,6 @@ pyvenv.cfg
 .venv
 venv
 pip-selfcheck.json
+
+# OS Downloads
+build
