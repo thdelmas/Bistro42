@@ -108,6 +108,8 @@ VBoxManage modifyvm "$VM_NAME" --cpus "$VM_CPUS_COUNT"
 cd ..
 #rm -rf 'build'
 
+./configure_ansible.sh "$SELECTION"
+
 # Insert Face B or Disk 2 to finish the install (^_^?)
 VboxManage startvm "$VM_NAME"
 # Je me demande vraiment à quoi sert cette commande
