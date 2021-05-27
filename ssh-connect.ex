@@ -1,6 +1,6 @@
 #!/usr/bin/expect -f
 #  ./ssh.exp port ip user password
-#  ./ssh.exp 4222 127.0.0.1 xubuntu xubuntu
+#  ./ssh.exp 4222 127.0.0.1 student student
 
 set sshport [lrange $argv 0 0]
 set server [lrange $argv 1 1]

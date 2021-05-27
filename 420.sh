@@ -106,10 +106,11 @@ VBoxManage modifyvm "$VM_NAME" --nic1 nat
 VBoxManage modifyvm "$VM_NAME" --natpf1 "ssh,tcp,,4222,,22"
 VBoxManage modifyvm "$VM_NAME" --cpus "$VM_CPUS_COUNT"
 cd ..
-#rm -rf 'build'
-
-./configure_ansible.sh "$SELECTION"
 
 # Insert Face B or Disk 2 to finish the install (^_^?)
 VboxManage startvm "$VM_NAME"
 # Je me demande vraiment à quoi sert cette commande
+
+./configure_ansible.sh "$SELECTION"
+
+#rm -rf 'build'
