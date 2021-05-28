@@ -27,7 +27,7 @@ VM_CPUS_COUNT='2'
 
 
 # Start
-printf "${TC_BLUE}\t42OS\nWelcome ${USER}${TC_RESET}\n"
+printf "${TC_GREEN}\t🍻 Bistro42 🍻\n${TC_BLUE}Welcome ${USER}${TC_RESET}\n"
 printf "${TC_YELLOW}Please choose your base distribution${TC_RESET}\n"
 
 
@@ -99,18 +99,23 @@ vboxmanage import "$(find '.' -name '*.ova')" --vsys 0 --eula accept --vmname "$
 
 # Configure Basic system settings (Network, graphics & memory)
 VBoxManage modifyvm "$VM_NAME" --ioapic on
-
 VBoxManage modifyvm "$VM_NAME" --memory "$VM_RAM" --vram "$VM_VRAM"
 VBoxManage modifyvm "$VM_NAME" --graphicscontroller vmsvga
 VBoxManage modifyvm "$VM_NAME" --nic1 nat
 VBoxManage modifyvm "$VM_NAME" --natpf1 "ssh,tcp,,4222,,22"
 VBoxManage modifyvm "$VM_NAME" --cpus "$VM_CPUS_COUNT"
+
+old_description="$(VBoxManage showvminfo "$VM_NAME" --details | sed -n '/Description:/,/Guest:/p' | grep -Ev "(Description:|Guest:)" | head -n1)"
+VBoxManage modifyvm "42OS" --description "$(printf "\t42 - ${old_description}\n\nBecause of the current crisis, you are allowed to organize remote defenses on Linux VM, on
+allowed projects only, in order to progress into your curriculum.\n")"
+
+
 cd ..
 
 # Insert Face B or Disk 2 to finish the install (^_^?)
 VboxManage startvm "$VM_NAME"
 # Je me demande vraiment à quoi sert cette commande
 
-./configure_ansible.sh "$SELECTION"
+./configure.sh "$SELECTION"
 
 #rm -rf 'build'

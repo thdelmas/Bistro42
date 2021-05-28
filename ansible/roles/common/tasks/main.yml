@@ -4,3 +4,9 @@
   become: true
   ansible.builtin.hostname:
     name: '{{ hostname }}'
+
+- name: Install ZSh
+  become: true
+  ansible.builtin.package:
+    name: zsh
+    state: present
