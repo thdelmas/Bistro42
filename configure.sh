@@ -13,7 +13,7 @@ NAME_FORMATED="$(echo "$1" | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]'
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-sed "s/student/$NAME_FORMATED/g" ansible.cfg > new_ansible.cfg
-mv new_ansible.cfg ansible.cfg
+sed "s/student/$NAME_FORMATED/g" ./ansible/ansible.cfg > ./ansible/new_ansible.cfg
+mv ./ansible/new_ansible.cfg ./ansible/ansible.cfg
 ./ssh-connect.ex 4222 127.0.0.1 "$NAME_FORMATED" "$NAME_FORMATED"
 ansible -m ping all
