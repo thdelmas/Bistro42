@@ -1,0 +1,13 @@
+# Common
+- Vim
+- VSCode
+- OpenSSH
+- Minikube
+- MinilibX
+- Norminette
+- Clang
+- Valgrind
+- Leaks
+- Nm
+- Wireshark
+- Man
