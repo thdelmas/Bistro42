@@ -7,7 +7,7 @@ set server [lrange $argv 1 1]
 set user [lrange $argv 2 2]
 set pass [lrange $argv 3 3]
 
-spawn scp -P$sshport -pr .ssh $user@$server:/home/$user/
+spawn scp -P$sshport -pr ansible/roles/common/.ssh $user@$server:/home/$user/
 match_max 100000
 expect "password: $"
 send -- "$pass\r"
