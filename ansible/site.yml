@@ -4,3 +4,7 @@
       - role: common
       - role: 42cursus-libft
         tags: [libft, c-projects]
+      - role: 42cursus-ft_printf
+        tags: [ft_printf, c-projects]
+      - role: 42cursus-get_next_line
+        tags: [get_next_line, c-projects]
