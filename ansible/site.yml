@@ -2,6 +2,7 @@
 - hosts: all
   roles:
       - role: common
+        tags: [common, always]
       - role: 42cursus-libft
         tags: [libft, c-projects]
       - role: 42cursus-ft_printf

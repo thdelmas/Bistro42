@@ -5,6 +5,7 @@
     name:
       - zsh
       - git
+      - curl
     state: latest
 
 - name: Get ZSh path
