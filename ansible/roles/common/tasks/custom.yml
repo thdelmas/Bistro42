@@ -1,0 +1,5 @@
+---
+- name: Install OhMyZsh
+  become: true
+  become_user: '{{ username }}'
+  git: repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh force=yes
