@@ -1,8 +1,0 @@
---- isofiles/isolinux/gtk.cfg	2021-03-27 11:40:31.000000000 +0100
-+++ gtk2.cfg	2021-05-05 11:40:48.267804379 +0200
-@@ -3,4 +3,4 @@
- 	menu label ^Graphical install
- 	menu default
- 	kernel /install.amd/vmlinuz
--	append vga=788 initrd=/install.amd/gtk/initrd.gz --- quiet 
-+	append auto=true noprompt hostname=42Home domain=unnamed vga=788 preseed/file=/cdrom/preseed/preseed.cfg initrd=/install.amd/gtk/initrd.gz --- quiet 

@@ -1,8 +1,0 @@
---- isofiles/isolinux/isolinux.cfg	2021-03-27 11:40:31.000000000 +0100
-+++ isolinux2.cfg	2021-05-05 09:59:19.454595204 +0200
-@@ -4,4 +4,4 @@
- include menu.cfg
- default vesamenu.c32
- prompt 0
--timeout 0
-+timeout 100
