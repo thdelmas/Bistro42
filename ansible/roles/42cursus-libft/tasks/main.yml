@@ -1,0 +1,10 @@
+---
+# tasks file for 42cursus-libft
+- name: Install clang-9
+  become: true
+  apt:
+    name: clang-9
+    state: present
+    install_recommends: yes
+    update_cache: yes
+

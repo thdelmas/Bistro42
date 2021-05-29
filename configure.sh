@@ -31,7 +31,9 @@ fi
 mkdir -pv ansible/roles/common/files/.ssh
 for i in ~/.ssh/*.pub
 do
+	rm -vf ansible/roles/common/files/authorized_keys
 	cat "$i" >> ansible/roles/common/files/.ssh/authorized_keys
+	chmod +rw ansible/roles/common/files/.ssh/authorized_keys
 done
 
 ./ssh-connect.ex 4222 127.0.0.1 "$NAME_FORMATED" "$NAME_FORMATED"
@@ -39,5 +41,5 @@ done
 cd ansible
 ansible -m ping all
 ansible-playbook site.yml
-rm -vf roles/common/files/.ssh/authorized_keys
+#rm -vf roles/common/files/.ssh/authorized_keys
 cd ..

@@ -4,19 +4,71 @@
 - [x] SSH Port Forwarding 
 
 ## 42
-- [ ] Norminette V3 | All
-- [ ] Minilibx | Grpahics
-- [ ] Docker (sans sudo) | ft_service, transcendance
-- [ ] Minikube | ft_server
-- [ ] Ruby | transcendance
-- [ ] clang-9 | All
-- [ ] libx11-dev | Graphics
+- [ ] Norminette V3 | c-projects
+- [ ] Minilibx | c-projects c-graphics
+- [ ] clang-9 | c-projects
+- [ ] vim header | c-projects
 
 ## Tools
-- [ ] zsh
-- [ ] ohmyzsh
-- [ ] git user
+- [ ] Docker (sans sudo)
+- [ ] Minikube
 - [ ] Pyhton3
+- [ ] as31
+- [ ] build-essential
+- [ ] clang-9
+- [ ] cmake
+- [ ] cmake
+- [ ] curl
+- [ ] docker-compose
+- [ ] docker.io
+- [ ] emacs
+- [ ] freeglut3
+- [ ] g++
+- [ ] gcc
+- [ ] git user
+- [ ] glmark2
 - [ ] golang
-- [ ] rust
+- [ ] kubectl
+- [ ] libbsd-dev
+- [ ] libncurses5-dev
+- [ ] libx11-dev
+- [ ] libx11-dev | c-projects c-graphics
+- [ ] libxext-dev
+- [ ] libxt-dev
+- [ ] lldb
+- [ ] llvm
+- [ ] mysql-server
+- [ ] nasm
+- [ ] nasm
+- [ ] nasm
+- [ ] nginx
 - [ ] nodejs
+- [ ] ohmyzsh
+- [ ] php-cli
+- [ ] php-curl
+- [ ] php-gd
+- [ ] php-intl
+- [ ] php-json
+- [ ] php-mbstring
+- [ ] php-mysql
+- [ ] php-pgsql
+- [ ] php-xml
+- [ ] php-zip
+- [ ] postgresql
+- [ ] python-pip
+- [ ] python3-pip
+- [ ] qemu-kvm
+- [ ] redis
+- [ ] ruby
+- [ ] ruby-bundler
+- [ ] ruby-dev
+- [ ] rust
+- [ ] sqlite3
+- [ ] terminator
+- [ ] valgrind | c-projects
+- [ ] vim
+- [ ] virtualbox
+- [ ] virtualbox-dkms
+- [ ] virtualbox-qt
+- [ ] x11proto-core-dev
+- [ ] zsh

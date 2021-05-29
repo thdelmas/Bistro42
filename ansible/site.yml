@@ -1,4 +1,6 @@
 ---
 - hosts: all
   roles:
-    - common
+      - role: common
+      - role: 42cursus-libft
+        tags: libft
