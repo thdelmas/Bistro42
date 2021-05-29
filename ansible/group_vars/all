@@ -1,3 +1,4 @@
 ---
 hostname: '42WorkStation'
-username: 'thdelmas'
+user:
+  login: 'thdelmas'

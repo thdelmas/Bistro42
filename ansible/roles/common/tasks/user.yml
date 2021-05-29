@@ -2,22 +2,22 @@
 - name: Create user
   become: true
   ansible.builtin.user:
-      name: '{{ username }}'
+      name: '{{ user.login }}'
       groups: sudo
       append: yes
 
 - name: Create SSH Dir
   become: true
-  become_user: '{{ username }}'
+  become_user: '{{ user.login }}'
   ansible.builtin.file:
       path: ~/.ssh
       state: directory
 
 - name: Copy SSH-Key
   become: true
-  become_user: '{{ username }}'
+  become_user: '{{ user.login }}'
   ansible.builtin.copy:
     src: .ssh/authorized_keys
     dest: ~/.ssh/authorized_keys
-    owner: '{{ username }}'
-    group: '{{ username }}'
+    owner: '{{ user.login }}'
+    group: '{{ user.login }}'
