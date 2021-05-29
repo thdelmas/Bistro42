@@ -31,7 +31,6 @@ fi
 mkdir -pv ansible/roles/common/files/.ssh
 for i in ~/.ssh/*.pub
 do
-	rm ansible/roles/common/files/.ssh/authorized_keys
 	cat "$i" >> ansible/roles/common/files/.ssh/authorized_keys
 done
 
