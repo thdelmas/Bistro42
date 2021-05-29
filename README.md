@@ -53,14 +53,8 @@ git clone https://github.com/thdelmas/bistro42 # Fetch source files
 cd bistro42
 
 # Create the virtualbox vm
-./generate_vm.sh
+./420.sh
 
-# Install linux with https://github.com/coreprocess/linux-unattended-installation
-
-# Run setup_42Home with the slug of the projects you want to setup
-# ex: ./setup_42Home.sh libft ; ./setup_42Home.sh libft get_next_line
-# Without arguments the script will setup an instance compatible with all projects
-./setup_42Home.sh
 ```
 
 ### Usage
@@ -69,7 +63,7 @@ cd bistro42
 
 - Connect with login: `student` and password: `student`
 - Open a shell (`Ctrl` + `alt` + `t`)
-- Run `~/.configure`
+- Run `ssh -p 4222 "$USER@127.0.0.1"`
 
 ## Contributing
 
