@@ -4,6 +4,7 @@
 *.iso
 *.ssh
 .build
+ansible/roles/common/files/.ssh/authorized_keys
 
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
