@@ -34,9 +34,10 @@ do
 	cat "$i" >> ansible/roles/common/files/.ssh/authorized_keys
 done
 
-sleep 3
 ./ssh-connect.ex 4222 127.0.0.1 "$NAME_FORMATED" "$NAME_FORMATED"
+
 cd ansible
 ansible -m ping all
 ansible-playbook site.yml
-rm -vf ansible/roles/common/files/.ssh/authorized_keys
+rm -vf roles/common/files/.ssh/authorized_keys
+cd ..

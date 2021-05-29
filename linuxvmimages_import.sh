@@ -36,8 +36,6 @@ linuxvmimages_import() {
 	then
 		VboxManage startvm "$VM_NAME"
 	else
-		sleep 2
 		printf "${TC_RED}VM with the name: ${VM_NAME} is already running${TC_RESET}\n"
-		sleep 2
 	fi
 }
