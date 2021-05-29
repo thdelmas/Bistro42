@@ -3,4 +3,4 @@
   roles:
       - role: common
       - role: 42cursus-libft
-        tags: libft
+        tags: [libft, c-projects]

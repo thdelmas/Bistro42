@@ -4,26 +4,24 @@
 - [x] SSH Port Forwarding 
 
 ## 42
-- [ ] Norminette V3 | c-projects
-- [ ] Minilibx | c-projects c-graphics
-- [ ] clang-9 | c-projects
+- [ ] norminette V3 | c-projects
+- [ ] minilibx | c-projects c-graphics
 - [ ] vim header | c-projects
 
 ## Tools
-- [ ] Docker (sans sudo)
-- [ ] Minikube
-- [ ] Pyhton3
+- [ ] docker (sans sudo)
+- [ ] minikube
+- [ ] pyhton3
 - [ ] as31
 - [ ] build-essential
-- [ ] clang-9
-- [ ] cmake
+- [x] clang-9 | c-projects
 - [ ] cmake
 - [ ] curl
 - [ ] docker-compose
 - [ ] docker.io
 - [ ] emacs
 - [ ] freeglut3
-- [ ] g++
+- [ ] g++ | cpp-projetcs
 - [ ] gcc
 - [ ] git user
 - [ ] glmark2
@@ -38,8 +36,6 @@
 - [ ] lldb
 - [ ] llvm
 - [ ] mysql-server
-- [ ] nasm
-- [ ] nasm
 - [ ] nasm
 - [ ] nginx
 - [ ] nodejs
@@ -71,4 +67,4 @@
 - [ ] virtualbox-dkms
 - [ ] virtualbox-qt
 - [ ] x11proto-core-dev
-- [ ] zsh
+- [x] zsh
