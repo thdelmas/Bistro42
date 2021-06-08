@@ -53,7 +53,9 @@ git clone https://github.com/thdelmas/bistro42 # Fetch source files
 cd bistro42
 
 # Create the virtualbox vm
-./420.sh
+./420.sh '42cursus-libft'
+# Or
+# ./420.sh '42cursus-ft_printf,42cursus-get_next_line,42cursus-libft'
 
 ```
 

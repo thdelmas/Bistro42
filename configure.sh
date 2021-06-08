@@ -40,6 +40,6 @@ done
 
 cd ansible
 ansible -m ping all
-ansible-playbook site.yml
+ansible-playbook site.yml --tags="$2"
 #rm -vf roles/common/files/.ssh/authorized_keys
 cd ..

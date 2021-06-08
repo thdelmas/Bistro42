@@ -30,7 +30,9 @@ linuxvmimages_downloader
 # Insert Face B or Disk 2 to finish the install (^_^?)
 linuxvmimages_import
 
+TAGS="$(echo $@ | tr ' ' ',')"
+
 if [ "$SELECTION" ]
 then
-	./configure.sh "$SELECTION"
+	./configure.sh "$SELECTION" "$TAGS"
 fi
