@@ -79,7 +79,7 @@ Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file
 
 ## Authors
 
-* **[thdelmas](https://github.com/thdelmas/thdelmas)** - *Initial design*
+* **[thdelmas](https://github.com/thdelmas)** - *Initial design*
 
 ## Licence
 
