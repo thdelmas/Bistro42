@@ -102,7 +102,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-TARGET_PROJECTS="42cursus-libft"
 ansible -m ping all
-ansible-playbook site.yml --tags="$TARGET_PROJECTS"
+if [ "$1" ]
+then
+	ansible-playbook site.yml --tags="$1"
+else
+	ansible-playbook site.yml
+fi
 cd -
