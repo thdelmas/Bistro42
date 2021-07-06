@@ -1,5 +1,0 @@
----
-- name: Install OhMyZsh
-  become: true
-  become_user: '{{ user.login }}'
-  shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -1,5 +1,0 @@
----
-- include: guest.yml
-- include: user.yml
-- include: utilities.yml
-- include: custom.yml
