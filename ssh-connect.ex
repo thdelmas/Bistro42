@@ -9,7 +9,7 @@ set pass [lrange $argv 3 3]
 
 set timeout -1
 match_max 10000
-spawn scp -P$sshport -pr ansible/roles/common/files/.ssh $user@$server:/home/$user/
+spawn scp -P$sshport -pr "$env(HOME)/.ssh/" "$user@$server:/home/$user/"
 expect "s password: $"
-	send -- "$pass\r"
-	send -- "\r"
+send -- "$pass\r"
+interact
