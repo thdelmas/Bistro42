@@ -27,7 +27,8 @@ SGOINFRE_PERSO='/sgoinfre/goinfre/Perso/'"$USER"
 if ! [ -d "$SGOINFRE_PERSO" ]
 then
 	printf "$SGOINFRE_PERSO doesn't exist\n" >&2
-	mkdir -pv "$SGOINFRE_PERSO"
+	mkdir -pv "$SGOINFRE_PERSO/VirtualBoxVMs"
+	vboxmanage setproperty machinefolder "$SGOINFRE_PERSO/VirtualBoxVMs"
 	chmod -R 700 "$SGOINFRE_PERSO"
 fi
 
