@@ -62,8 +62,12 @@ if ! [ "$(vboxmanage list vms | grep "$VM_NAME")" ]
 then
 	# Import downloaded file & accept VBox licence
 	printf "${TC_YELLOW}Import ova... ${TC_RESET}\n"
-	vboxmanage import "$OVA_FILE" --vsys 0 --eula accept --vmname "$VM_NAME"
-
+	if ! vboxmanage import "$OVA_FILE" --vsys 0 --eula accept --vmname "$VM_NAME"
+	then
+		printf "${TC_RED}Failed to import the VM${TC_RESET}\n"
+		printf "${TC_RED}Check free space on disk${TC_RESET}\n"
+		exit 1
+	fi
 	# Configure Basic system settings (Network, graphics & memory)
 	VBoxManage modifyvm "$VM_NAME" --ioapic on
 	VBoxManage modifyvm "$VM_NAME" --memory "$VM_RAM" --vram "$VM_VRAM"
@@ -71,7 +75,6 @@ then
 	VBoxManage modifyvm "$VM_NAME" --nic1 nat
 	VBoxManage modifyvm "$VM_NAME" --natpf1 "ssh,tcp,,4222,,22"
 	VBoxManage modifyvm "$VM_NAME" --cpus "$VM_CPUS_COUNT"
-
 	old_description="$(VBoxManage showvminfo "$VM_NAME" --details | sed -n '/Description:/,/Guest:/p' | grep -Ev "(Description:|Guest:)" | head -n1)"
 	VBoxManage modifyvm "42OS" --description "$(printf "\t42 - ${old_description}\n\nBecause of the current crisis, you are allowed to organize remote defenses on Linux VM, on
 	allowed projects only, in order to progress into your curriculum.\n")"
@@ -105,8 +108,8 @@ pip install -r requirements.txt
 ansible -m ping all
 if [ "$1" ]
 then
-	ansible-playbook site.yml --tags="$1"
+	;#ansible-playbook site.yml --tags="$1"
 else
-	ansible-playbook site.yml
+	;#ansible-playbook site.yml
 fi
 cd -
