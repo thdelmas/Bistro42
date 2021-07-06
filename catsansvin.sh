@@ -94,12 +94,24 @@ fi
 
 # Copy SSH-Key
 
-./ssh-connect.ex 4222 127.0.0.1 'xubuntu' 'xubuntu'
-
+SSH_PUBKEY="$HOME/.ssh/id_rsa.pub"
+if ! [ -e "$SSH_PUBKEY" ]
+then
+	printf "${TC_RED}SSH-Key not found${TC_RESET}\n"	
+	exit 1
+else
+	cat "$SSH_PUBKEY" >> $HOME/.ssh/authorized_keys
+	./ssh-connect.ex 4222 127.0.0.1 'xubuntu' 'xubuntu'
+fi
 
 # Configure VM
 
-git clone 'https://github.com/thdelmas/42Cursus-playbooks'
+if [ -e '42Cursus-playbooks' ]
+then
+	cd 42Cursus-playbooks && git pull
+else
+	git clone 'https://github.com/thdelmas/42Cursus-playbooks'
+fi
 cd 42Cursus-playbooks
 python3 -m venv venv
 source venv/bin/activate
