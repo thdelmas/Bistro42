@@ -79,11 +79,7 @@ Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file
 
 ## Authors
 
-* **thdelmas** - *Initial design*
-
-![jaeskim's stats](https://badge42.herokuapp.com/api/stats/thdelmas)
-
-See also the list of [contributors](https://github.com/thdelmas/bistro42/graphs/contributors) who participated in this project.
+* **[thdelmas](https://github.com/thdelmas/thdelmas)** - *Initial design*
 
 ## Licence
 
