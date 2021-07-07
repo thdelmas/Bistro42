@@ -121,8 +121,8 @@ pip install -r requirements.txt
 ansible -m ping all
 if [ "$1" ]
 then
-	;#ansible-playbook site.yml --tags="$1"
+	ansible-playbook site.yml --tags="$1"
 else
-	;#ansible-playbook site.yml
+	ansible-playbook site.yml
 fi
 cd -
