@@ -106,13 +106,13 @@ fi
 
 # Configure VM
 
-if [ -e '42Cursus-playbooks' ]
+if [ -e '42Playbooks' ]
 then
-	cd 42Cursus-playbooks && git pull
+	cd 42Playbooks && git pull
 else
-	git clone 'https://github.com/thdelmas/42Cursus-playbooks'
+	git clone 'https://github.com/thdelmas/42Playbooks'
 fi
-cd 42Cursus-playbooks
+cd 42Playbooks
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
