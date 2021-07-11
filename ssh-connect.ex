@@ -10,6 +10,8 @@ set pass [lrange $argv 3 3]
 set timeout -1
 match_max 10000
 spawn scp -P$sshport -pr "$env(HOME)/.ssh/" "$user@$server:/home/$user/"
+expect "(yes/no)?"
+send -- "yes\r"
 expect "s password: $"
 send -- "$pass\r"
 interact
