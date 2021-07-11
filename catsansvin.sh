@@ -108,11 +108,12 @@ fi
 
 if [ -e '42Playbooks' ]
 then
-	cd 42Playbooks && git pull
+	cd 42Playbooks &&
+		git pull
 else
-	git clone 'https://github.com/thdelmas/42Playbooks'
+	git clone 'https://github.com/thdelmas/42Playbooks' &&
+		cd 42Playbooks
 fi
-cd 42Playbooks
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
