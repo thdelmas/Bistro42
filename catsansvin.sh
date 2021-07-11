@@ -114,10 +114,9 @@ else
 	git clone 'https://github.com/thdelmas/42Playbooks' &&
 		cd 42Playbooks
 fi
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
 
+./configure.sh
+source .venv/bin/activate
 
 ansible -m ping all
 if [ "$1" ]
