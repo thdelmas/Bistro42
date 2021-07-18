@@ -9,7 +9,7 @@ set pass [lrange $argv 3 3]
 
 set timeout -1
 match_max 10000
-spawn scp -oStrictHostKeyChecking=no -oCheckHostIP=no -P$sshport -pr "$env(HOME)/.ssh/" "$user@$server:/home/$user/"
+spawn scp -pr -o StrictHostKeyChecking=no -o CheckHostIP=no -P$sshport "$env(HOME)/.ssh/" "$user@$server:/home/$user/"
 expect "s password: $"
 send -- "$pass\r"
 interact
