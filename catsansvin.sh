@@ -3,10 +3,9 @@
 
 # Check Dump
 
-if ! [ "$(hostname | grep '42.fr')" ]
+if ! [ "$(hostname | grep '42')" ]
 then
 	printf 'This Script is made to work with the 42 infra only, this won'"'"'t do the job on your laptop' >&2
-	exit 1
 fi
 
 
