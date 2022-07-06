@@ -22,7 +22,7 @@ fi
 
 # Check Sgoinfre
 
-SGOINFRE_PERSO='/sgoinfre/goinfre/Perso/'"$USER"
+SGOINFRE_PERSO='/sgoinfre/Perso/'"$USER"
 if ! [ -d "$SGOINFRE_PERSO" ]
 then
 	printf "$SGOINFRE_PERSO doesn't exist\n" >&2
@@ -34,7 +34,7 @@ fi
 
 # Check OVA File
 
-OVA_FILE='/sgoinfre/goinfre/ISO/Xubuntu_20.04.1_VB_LinuxVMImages.COM.ova'
+OVA_FILE='/sgoinfre/ISO/Xubuntu_42Paris.ova'
 IMAGE_URL='https://sourceforge.net/projects/linuxvmimages/files/VirtualBox/X/Xubuntu_20.04.1_VB.zip/download'
 if ! [ -e "$OVA_FILE" ]
 then
